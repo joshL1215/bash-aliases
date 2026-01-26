@@ -40,8 +40,9 @@ cfgpush() {
 
 
   local cfg="$1"
+  local msg="${2:-Updated $1 config}"
   if [ -z "$cfg" ]; then
-    echo "Usage: cfgpush <config-name>"
+    echo "Usage: cfgpush <config-name> [commit-message]"
     echo "Available configs: ${!cfg_dirs[@]}"
     return 1
 
@@ -62,7 +63,7 @@ cfgpush() {
   # Check for changes
   if [ -n "$(git status --porcelain)" ]; then
     git add .
-    git commit -m "Updated $cfg config"
+    git commit -m "$msg"
     git push
     echo "$cfg config pushed successfully."
   else
