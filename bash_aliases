@@ -9,3 +9,12 @@ alias nvcfg='nvim ~/.config/nvim/init.lua'
 
 # bash aliases
 alias aliascfg='nvim ~/.config/bash-extra/bash_aliases'
+
+
+
+
+
+# make cd always auto ls
+cd() {
+    builtin cd "$@" && ls
+}
