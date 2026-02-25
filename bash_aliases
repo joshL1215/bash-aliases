@@ -10,24 +10,13 @@ alias nvcfg='nvim ~/.config/nvim/init.lua'
 # bash aliases
 alias aliascfg='nvim ~/.config/bash-extra/bash_aliases'
 
+# wezterm config
+alias wezcfg='nvim /mnt/c/Users/Josh/.wezterm.lua'
+
 # make cd always auto ls
 cd() {
     builtin cd "$@" && ls
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # quick config git push
 cfgpush() {
@@ -36,6 +25,7 @@ cfgpush() {
     [nvcfg]="$HOME/.config/nvim"
     [aliascfg]="$HOME/.config/bash-extra"
     [acfg]="/mnt/c/Users/Josh/AppData/Roaming/alacritty"
+    [wezcfg]="/mnt/c/Users/Josh/.wezterm.lua"
   )
 
 
